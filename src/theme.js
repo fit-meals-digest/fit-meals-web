@@ -1,4 +1,4 @@
-import { createMuiTheme, createTheme } from "@material-ui/core";
+import { createTheme } from "@material-ui/core";
 import { deepPurple, amber } from "@material-ui/core/colors";
 
 const theme = createTheme({
