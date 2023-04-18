@@ -13,6 +13,7 @@ function PageFooter() {
                 <div className={classes.storeOption}>
                     <div className={classes.footerTextTitle}>Join the community</div>
                     <img className={classes.img} src={playstoreimage} alt="playstore" href="https://google.com"></img>
+                    <span></span>
                     <img className={classes.img} src={applestoreimage} alt="applestore" href="https://apple.com"></img>
                 </div>
             </div>
