@@ -3,6 +3,18 @@ import '../../App.css'
 
 
 const PageHeaderStyle = makeStyles((theme) => ({
+  root: {
+    padding: theme.spacing(2),
+    [theme.breakpoints.up('sm')]: {
+      padding: theme.spacing(4),
+    },
+    [theme.breakpoints.up('md')]: {
+      padding: theme.spacing(6),
+    },
+    [theme.breakpoints.up('lg')]: {
+      padding: theme.spacing(8),
+    },
+  },
   header: {
     display: 'flex',
     alignItems: 'center',

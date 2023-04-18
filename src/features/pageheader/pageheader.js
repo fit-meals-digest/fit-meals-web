@@ -6,7 +6,7 @@ function Header() {
     const classes = PageHeaderStyle();
 
     return (
-        <header className={classes.header}>
+        <header className={`${classes.header} ${classes.root}`}>
             <div className={classes.logocontainer}>
                 <div className={classes.largeLogoText}>fit+meal</div>
                 <div className={classes.smallLogoText}>digest</div>

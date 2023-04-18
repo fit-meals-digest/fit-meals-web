@@ -4,15 +4,12 @@ import PageFooterStyle from "./pagefooterstyle";
 function PageFooter(){
     const classes = PageFooterStyle();
     return (
-        <div className="page-footer">
-            <div className="container">
-                <div className="row">
-                    <div className="col-lg-12">
-                        <div className="footer-copyright text-center py-3">Copyright &copy; 2023</div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div className={classes.footer}>
+      <div>Footer content</div>
+      <div className={classes.copyright}>
+        &copy; {new Date().getFullYear()} Your Company Name
+      </div>
+    </div>
     )
 }
 

@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 function Home() {
     const classes = HomePageStyle();
     return (
-        <div className={classes.banner}>
+        <div className={`${classes.banner} ${classes.root}`}>
             <div className={classes.leftblock}>
                 <h1 className={classes.title}>Community</h1>
                 <h3 className={classes.subtitle}>sharing fitfam meals across different regions</h3>

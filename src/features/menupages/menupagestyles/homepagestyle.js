@@ -2,6 +2,18 @@ import { makeStyles } from "@material-ui/core";
 
 const HomePageStyle = makeStyles((theme) => {
     return {
+        root: {
+            padding: theme.spacing(2),
+            [theme.breakpoints.up('sm')]: {
+              padding: theme.spacing(4),
+            },
+            [theme.breakpoints.up('md')]: {
+              padding: theme.spacing(6),
+            },
+            [theme.breakpoints.up('lg')]: {
+              padding: theme.spacing(8),
+            },
+          },
         banner: {
             display: 'flex',
             justifyContent: 'space-between',
