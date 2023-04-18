@@ -40,7 +40,8 @@ const HomePageStyle = makeStyles((theme) => {
         },
         image:{
             width: '100%',
-            height: 'auto'
+            height: 'auto',
+            borderRadius:'0.5rem'
         },
         description:{
             fontFamily: 'PoppinsThin',
