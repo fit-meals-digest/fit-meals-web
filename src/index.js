@@ -1,65 +1,71 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
 import './App.css';
-import { createBrowserRouter, Link, RouterProvider, Route, Outlet } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Home from './features/menupages/home';
 import About from './features/menupages/about';
 import Header from './features/pageheader/pageheader';
-import { makeStyles } from '@material-ui/core/styles';
 import Articles from './features/menupages/articles';
 import Contact from './features/menupages/contact';
 import PageFooter from './features/pagefooter/pagefooter';
+import theme from './theme';
+import { ThemeProvider, StyledEngineProvider } from '@mui/material';
+import makeStyles from '@mui/styles/makeStyles';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles({
   root: {
-    backgroundColor: 'black',
+    backgroundColor: '#000000',
     minHeight: '100vh',
-    padding: theme.spacing(2),
-    [theme.breakpoints.up('sm')]: {
-      padding: theme.spacing(4),
+    padding: '16px',
+    '@media (min-width:600px)': {
+      padding: 32,
     },
-    [theme.breakpoints.up('md')]: {
-      padding: theme.spacing(6),
+    '@media (min-width:960px)': {
+      padding: '48px',
     },
-    [theme.breakpoints.up('lg')]: {
-      padding: theme.spacing(8),
+    '@media (min-width:1280px)': {
+      padding: '64px',
     },
   },
-}));
+});
 
 const AppLayout = () => (
-  <div className={useStyles().root}>
-      <Header/>
-      <Outlet/>
-      <PageFooter/>
-  </div>
+  <StyledEngineProvider injectFirst>
+    <ThemeProvider theme={theme}>
+      <div className={useStyles().root}>
+        <Header />
+        <Outlet />
+        <PageFooter />
+      </div>
+    </ThemeProvider>
+  </StyledEngineProvider>
+
 )
 const router = createBrowserRouter([
   {
-      element: <AppLayout/>,
-      children:[
-          {
-              path: "/",
-              element: <Home/>,
-          },
-          {
-              path:"about",
-              element: <About/>,
-          },
-          {
-            path:"blog",
-            element: <Articles/>,
-        },
-          {
-              path:"contact",
-              element: <Contact/>,
-          },
-      ]
+    element: <AppLayout />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "about",
+        element: <About />,
+      },
+      {
+        path: "blog",
+        element: <Articles />,
+      },
+      {
+        path: "contact",
+        element: <Contact />,
+      },
+    ]
   }
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <RouterProvider router={router}/>
+  <RouterProvider router={router} />
 );

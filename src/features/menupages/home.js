@@ -17,7 +17,7 @@ in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 occaecat cupidatat non proident, sunt in culpa qui officia deserunt molli laborum.</p>
                 <button className={classes.leadingButton}>
                 <Link className={classes.linktext} to="about">
-                        <p className={classes.menuItem}>Learn more</p>
+                        <p className={classes.learnMoreButton}>Learn more</p>
                     </Link>
                 </button>
             </div>

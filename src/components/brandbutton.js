@@ -1,6 +1,7 @@
 import React from "react";
-import { Button, withStyles } from "@material-ui/core";
-import { amber, deepPurple } from "@material-ui/core/colors";
+import { Button } from "@mui/material";
+import withStyles from '@mui/styles/withStyles';
+import { amber, deepPurple } from "@mui/material/colors";
 import clsx from 'clsx'
 
 const styles = () => ({

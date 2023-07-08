@@ -1,29 +1,31 @@
-import { makeStyles } from "@material-ui/core";
+import makeStyles from '@mui/styles/makeStyles';
 
-const HomePageStyle = makeStyles((theme) => {
-    return {
+const HomePageStyle = makeStyles({
         root: {
-            padding: theme.spacing(2),
-            [theme.breakpoints.up('sm')]: {
-              padding: theme.spacing(4),
-            },
-            [theme.breakpoints.up('md')]: {
-              padding: theme.spacing(6),
-            },
-            [theme.breakpoints.up('lg')]: {
-              padding: theme.spacing(8),
-            },
+          padding: '16px',
+          '@media (min-width:600px)': {
+            padding: 32,
+          },
+          '@media (min-width:960px)': {
+            padding: '48px',
+          },
+          '@media (min-width:1280px)': {
+            padding: '64px',
+          },
           },
         banner: {
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'center',
             backgroundcolor: '#f5f5f5',
-            padding: '20px'
+            padding: '20px',
+            '@media (max-width:780px)': {
+              flexDirection: "column"
+            }
         },
         leftblock:{
             flex: '1',
-            marginRight: '20px'
+            marginRight: '20px',
         },
         rightblock:{
             flex: '1'
@@ -31,12 +33,18 @@ const HomePageStyle = makeStyles((theme) => {
         title: {
             color: '#75C685',
             fontFamily: 'GabtonMalgora',
-            fontSize: '8rem'
+            fontSize: '8rem',
+            '@media (max-width:780px)': {
+              fontSize: "3rem"
+            }
         },
         subtitle: {
             color: '#ffffff',
             fontFamily: 'GabtonMalgora',
-            fontSize: '2rem'
+            fontSize: '2rem',
+            '@media (max-width:780px)': {
+              fontSize: "1.2rem"
+            }
         },
         image:{
             width: '100%',
@@ -46,7 +54,10 @@ const HomePageStyle = makeStyles((theme) => {
         description:{
             fontFamily: 'PoppinsThin',
             fontSize: '1.5rem',
-            color: 'white'
+            color: 'white',
+            '@media (max-width:780px)': {
+              fontSize: "0.8rem"
+            }
         },
         leadingButton: {
             backgroundColor: '#75C685',
@@ -59,16 +70,23 @@ const HomePageStyle = makeStyles((theme) => {
             display: 'inline-block',
             fontSize: '1.5rem',
             marginTop: '2rem',
-            fontFamily: "GabtonMalgora"
+            fontFamily: "GabtonMalgora",
+            '@media (max-width:780px)': {
+              marginBottom: '2rem',
+              marginTop:'0.5rem',
+              padding: '10px 16px',
+            }
           },
           linktext:{
             textDecoration:'none'
           },
-          menuItem: {
+          learnMoreButton: {
             fontFamily: 'GabtonMalgora',
             fontSize: '1.5rem',
-            color: '#fff'
+            color: '#fff',
+            '@media (max-width:780px)': {
+              fontSize: "1.0rem"
+            }
           },
-    }
-});
+    });
 export default HomePageStyle;
